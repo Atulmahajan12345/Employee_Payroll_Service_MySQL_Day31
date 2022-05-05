@@ -199,3 +199,50 @@ mysql> SELECT * FROM employee_payrolls;
 3 rows in set (0.00 sec)
 
 
+====================================================================================
+UC-7-Ability to find sum, average, min, max and number of male and female employees
+====================================================================================
+
+
+mysql> select gender,AVG(salary) from employee_payrolls group by gender;
++--------+-------------------+
+| gender | AVG(salary)       |
++--------+-------------------+
+| M      | 8346666.666666667 |
++--------+-------------------+
+1 row in set (0.00 sec)
+
+mysql> select AVG(salary) from employee_payrolls;
++-------------------+
+| AVG(salary)       |
++-------------------+
+| 8346666.666666667 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select gender,SUM(salary) from employee_payrolls group by gender;
++--------+-------------+
+| gender | SUM(salary) |
++--------+-------------+
+| M      |    25040000 |
++--------+-------------+
+1 row in set (0.00 sec)
+
+mysql> select gender,MIN(salary) from employee_payrolls group by gender;
++--------+-------------+
+| gender | MIN(salary) |
++--------+-------------+
+| M      |       40000 |
++--------+-------------+
+1 row in set (0.00 sec)
+
+mysql> select count(Salary) as COUNT_OF_SALARY from employee_payrolls;
++-----------------+
+| COUNT_OF_SALARY |
++-----------------+
+|               3 |
++-----------------+
+1 row in set (0.00 sec)
+
+
+
