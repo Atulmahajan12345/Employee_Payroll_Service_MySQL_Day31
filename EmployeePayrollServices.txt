@@ -82,3 +82,16 @@ mysql>  DESCRIBE employee_payrolls;
 | start  | date         | NO   |     | NULL    |                |
 +--------+--------------+------+-----+---------+----------------+
 4 rows in set (0.01 sec)
+
+
+=============================================================================================
+UC3-Creating employee payroll data in the payroll service database as part of CRUD Operation
+=============================================================================================
+
+mysql> INSERT INTO employee_payroll ( name, salary, start) VALUES
+    -> ( 'Bhushan', 3000000.0, '2019-10-13' ),
+    -> ( 'Rahul', 40000.0, '2020-05-22' ),
+    -> ( 'Atul', 22000000.0, '2022-05-19' );
+Query OK, 3 rows affected (0.00 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
