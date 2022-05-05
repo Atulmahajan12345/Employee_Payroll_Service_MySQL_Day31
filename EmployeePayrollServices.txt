@@ -1,0 +1,57 @@
+===========================================================
+UC1-Creating Databases as Employee Payroll Services
+===========================================================
+
+mysql> show databases;
++--------------------------+
+| Database                 |
++--------------------------+
+| addressbookservice       |
+| addressbookservice1      |
+| addressbookservices      |
+| employee_payroll_service |
+| information_schema       |
+| mysql                    |
+| performance_schema       |
+| sakila                   |
+| sys                      |
+| world                    |
++--------------------------+
+10 rows in set (0.01 sec)
+
+mysql> CREATE DATABASE testdb;
+Query OK, 1 row affected (0.01 sec)
+
+mysql>  DROP DATABASE testdb;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> CREATE DATABASE Employee_Payroll_Services;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> USE Employee_Payroll_Service;
+Database changed
+mysql> show databases;
++---------------------------+
+| Database                  |
++---------------------------+
+| addressbookservice        |
+| addressbookservice1       |
+| addressbookservices       |
+| employee_payroll_service  |
+| employee_payroll_services |
+| information_schema        |
+| mysql                     |
+| performance_schema        |
+| sakila                    |
+| sys                       |
+| world                     |
++---------------------------+
+11 rows in set (0.00 sec)
+
+mysql> SELECT DATABASE();
++--------------------------+
+| DATABASE()               |
++--------------------------+
+| employee_payroll_service |
++--------------------------+
+1 row in set (0.00 sec)
